@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ApiFunctionalSpec" tests="4" skipped="0" failures="1" errors="0" timestamp="2016-09-14T18:38:06" hostname="24a074f0317a" time="1.954">
+  <properties/>
+  <testcase name="Result count is equal to number forks with hystrix - with Hystrix" classname="ApiFunctionalSpec" time="1.761">
+    <failure message="Condition not satisfied:&#10;&#10;result.origins.keySet().size() == expected&#10;|      |       |        |      |  |&#10;|      |       |        2      |  3&#10;|      |       [foo, hi]       false&#10;|      [foo:[name:foo, value:bar], hi:[name:hi, value:howdy]]&#10;[origins:[foo:[name:foo, value:bar], hi:[name:hi, value:howdy]]]&#10;" type="org.spockframework.runtime.SpockComparisonFailure">Condition not satisfied:
+
+result.origins.keySet().size() == expected
+|      |       |        |      |  |
+|      |       |        2      |  3
+|      |       [foo, hi]       false
+|      [foo:[name:foo, value:bar], hi:[name:hi, value:howdy]]
+[origins:[foo:[name:foo, value:bar], hi:[name:hi, value:howdy]]]
+
+	at ApiFunctionalSpec.Result count is equal to number forks with hystrix - #description(ApiFunctionalSpec.groovy:43)
+</failure>
+  </testcase>
+  <testcase name="Result count is equal to number forks with hystrix - with hystrix again" classname="ApiFunctionalSpec" time="0.07"/>
+  <testcase name="Result count is equal to number forks without hystrix - first call" classname="ApiFunctionalSpec" time="0.057"/>
+  <testcase name="Result count is equal to number forks without hystrix - second call" classname="ApiFunctionalSpec" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO ratpack.server.RatpackServer - Starting server...
+[Test worker] INFO ratpack.server.RatpackServer - Building registry...
+[Test worker] INFO ratpack.server.RatpackServer - Ratpack started (development) for http://localhost:60310
+[ratpack-compute-1-2] WARN com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+[ratpack-compute-1-2] INFO com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[ratpack-compute-1-2] INFO com.netflix.config.DynamicPropertyFactory - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@506b22a7
+[Test worker] INFO ratpack.server.RatpackServer - Stopping server...
+[Test worker] INFO ratpack.server.RatpackServer - Server stopped.
+[Test worker] INFO ratpack.server.RatpackServer - Starting server...
+[Test worker] INFO ratpack.server.RatpackServer - Building registry...
+[Test worker] INFO ratpack.server.RatpackServer - Ratpack started (development) for http://localhost:60312
+[Test worker] INFO ratpack.server.RatpackServer - Stopping server...
+[Test worker] INFO ratpack.server.RatpackServer - Server stopped.
+[Test worker] INFO ratpack.server.RatpackServer - Starting server...
+[Test worker] INFO ratpack.server.RatpackServer - Building registry...
+[Test worker] INFO ratpack.server.RatpackServer - Ratpack started (development) for http://localhost:60314
+[Test worker] INFO ratpack.server.RatpackServer - Stopping server...
+[Test worker] INFO ratpack.server.RatpackServer - Server stopped.
+[Test worker] INFO ratpack.server.RatpackServer - Starting server...
+[Test worker] INFO ratpack.server.RatpackServer - Building registry...
+[Test worker] INFO ratpack.server.RatpackServer - Ratpack started (development) for http://localhost:60316
+[Test worker] INFO ratpack.server.RatpackServer - Stopping server...
+[Test worker] INFO ratpack.server.RatpackServer - Server stopped.
+]]></system-err>
+</testsuite>
